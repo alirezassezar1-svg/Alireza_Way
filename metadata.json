@@ -1,0 +1,8 @@
+{
+  "name": "راه علیرضا | Alireza's Path",
+  "description": "راهنمای جامع، هوشمند و همیشه به‌روز مسیر علمی علیرضا از کارشناسی ارشد تا دکتری هوش مصنوعی در برترین دانشگاه‌های ایران و جهان",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

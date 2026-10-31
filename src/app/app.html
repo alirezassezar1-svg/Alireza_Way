@@ -1,0 +1,48 @@
+<div class="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-emerald-500/20 selection:text-emerald-400">
+  <!-- Top Bar Navigation Contract -->
+  <app-header></app-header>
+
+  <!-- Workspace Canvas -->
+  <div class="flex-1 flex max-w-[1600px] w-full mx-auto">
+    <!-- Desktop Sidebar (256px wide, sticky) -->
+    <app-sidebar></app-sidebar>
+
+    <!-- Main Viewport Content -->
+    <main class="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 py-6 pb-20 lg:pb-12">
+      @switch (store.activeTab()) {
+        @case ('dashboard') {
+          <app-dashboard-view></app-dashboard-view>
+        }
+        @case ('universities') {
+          <app-universities-view></app-universities-view>
+        }
+        @case ('libraries') {
+          <app-libraries-view></app-libraries-view>
+        }
+        @case ('labs') {
+          <app-labs-view></app-labs-view>
+        }
+        @case ('conferences') {
+          <app-conferences-view></app-conferences-view>
+        }
+        @case ('tools') {
+          <app-tools-view></app-tools-view>
+        }
+        @case ('calendar') {
+          <app-calendar-view></app-calendar-view>
+        }
+        @case ('bookmarks') {
+          <app-bookmarks-view></app-bookmarks-view>
+        }
+      }
+    </main>
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <app-bottom-nav></app-bottom-nav>
+
+  <!-- Global Modals & Overlays -->
+  <app-search-modal></app-search-modal>
+  <app-note-modal></app-note-modal>
+  <app-add-item-modal></app-add-item-modal>
+</div>
